@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.cantainer {
+  max-width: 1200px;
+  margin: auto;
+}
+.btn {
+  background-color: #dd0000;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+}
+/* .banner */
+
+.banner {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+}
+.banner h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.banner p {
+  color: #ffffff;
+  margin: 15px 0;
+}
