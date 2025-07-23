@@ -1,19 +1,29 @@
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+/* sherd item */
 .cantainer {
   max-width: 1200px;
   margin: auto;
 }
 .btn {
   background-color: #dd0000;
-  padding: 15px 25px;
+  padding: 25px 15px;
   border-radius: 10px;
   font-weight: 600;
   color: #ffffff;
   border: none;
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
 }
 /* .banner */
 
@@ -23,12 +33,111 @@
   background-color: black;
   color: white;
   border-radius: 50px;
+  margin: 50px auto;
+}
+.banner-left {
+  padding-left: 50px;
+  flex: 1;
+}
+.banner-right img {
+  display: block;
 }
 .banner h2 {
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 70px;
+  font-weight: 500;
+  line-height: 75px;
+}
+.banner p {
+  max-width: 656px;
+  font-weight: 300;
+}
+.banner-right {
+  flex: 1;
 }
 .banner p {
   color: #ffffff;
   margin: 15px 0;
+}
+
+/* upcoming-matches */
+.upcoming-matches {
+  display: flex;
+  padding: 50px 0;
+  gap: 20px;
+}
+.upcoming-matches-left {
+  background-color: black;
+  display: flex;
+  width: 25%;
+  height: fit-content;
+  padding: 15px;
+  flex-direction: column;
+  gap: 10px;
+}
+.upcoming-matches-left .btn:nth-child(1),
+.upcoming-matches-left .btn:nth-child(2) {
+  background-color: #ffffff;
+  color: black;
+}
+/* upcoming-matches-right */
+.upcoming-matches-right {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.upcoming-matches-right .card {
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.upcoming-matches-right .card .card-body {
+  padding: 20px;
+}
+
+.upcoming-matches-right .card img {
+  height: 180px;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.upcoming-matches-right .card .btn {
+  background-color: #ffffff;
+  color: black;
+  border: 2px black solid;
+  padding: 8px 12px;
+  margin-top: 10px;
+}
+.upcoming-matches-right .card h2 {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+.card-bottom {
+  display: flex;
+  gap: 20px;
+  color: #161616cc;
+}
+
+@media screen and (max-width: 992px) {
+  .banner h2 {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .upcoming-matches {
+    flex-direction: column;
+  }
+  .upcoming-matches-left {
+    flex-direction: row;
+    width: 100%;
+    background-color: transparent;
+  }
+  .upcoming-matches-left > * {
+    flex: 1;
+  }
+  .upcoming-matches-left .btn {
+    border: 1px solid white;
+  }
+  .upcoming-matches-right {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
